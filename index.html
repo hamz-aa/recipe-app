@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/953afe11c5.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Food Menu API Task</title>
+  </head>
+  <body>
+    <main>
+      <header class="header">
+        <div class="logo d-flex">
+          <i class="fa-solid fa-utensils"></i>
+          <p id="forkify">forkify</p>
+        </div>
+        <div class="search-box d-flex">
+          <input
+            type="search"
+            name=""
+            id="search-box"
+            placeholder="Search over 1,000,000 recipes..."
+          />
+          <button id="search-btn">
+            <i class="fa-solid fa-magnifying-glass"></i>SEARCH
+          </button>
+        </div>
+        <div class="misc d-flex">
+          <div class="add">
+            <i class="fa-regular fa-pen-to-square"></i>
+            <p>ADD RECIPE</p>
+          </div>
+          <div class="bookmark">
+            <i class="fa-regular fa-bookmark"></i>
+            <p>BOOKMARKS</p>
+          </div>
+        </div>
+      </header>
+      <aside class="left-section">
+        <template id="left-sec-template">
+          <div class="left-section-wrapper">
+            <div class="img-wrapper">
+              <img src="" alt="" />
+            </div>
+            <div class="img-content">
+              <p class="food-title"></p>
+              <p class="food-description"></p>
+            </div>
+          </div>
+        </template>
+      </aside>
+      <aside class="right-section">
+        <div class="starter-text">
+          <i class="fa-regular fa-face-smile"></i>
+          <p>
+            Start by searching for a recipe or <br />
+            an ingredient. Have fun!
+          </p>
+        </div>
+        <template id="right-sec-template">
+          <div class="recipe-description">
+            <div class="recipe-img">
+              <img src="" alt="" />
+              <p class="recipe-name"></p>
+            </div>
+            <div class="recipe-info">
+              <div class="info-box">
+                <div class="minutes">
+                  <i class="fa-regular fa-clock"></i>
+                  <p class="time"></p>
+                </div>
+                <div class="servings">
+                  <i class="fa-solid fa-user-group"></i>
+                  <p class="serving-text"></p>
+                  <i class="fa-solid fa-circle-plus"></i>
+                  <i class="fa-solid fa-circle-minus"></i>
+                </div>
+              </div>
+              <div class="bookmark-icon">
+                <i class="fa-solid fa-bookmark"></i>
+              </div>
+            </div>
+            <div class="recipe-ingredients">
+              <p class="title">RECIPE INGREDIENTS</p>
+              <div class="ingredients">
+                <ul></ul>
+              </div>
+            </div>
+            <div class="recipe-footer">
+              <p class="title">HOW TO COOK IT</p>
+              <p class="sub-text">
+                This recipe was designed by
+                <a class="recipe-site" href="" target="_blank"></a>. Please
+                check out directions at their website.
+              </p>
+            </div>
+          </div>
+        </template>
+      </aside>
+
+      <dialog>
+        <p>Please try another recipe</p>
+        <button onclick="modalHandler()">OK</button>
+      </dialog>
+    </main>
+  </body>
+</html>
